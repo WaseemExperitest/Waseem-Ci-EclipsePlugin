@@ -18,6 +18,9 @@ public class BaseTest {
 		dc.setCapability("deviceQuery", adhocDevice(deviceQuery));
 		dc.setCapability("reportDirectory", "reports");
 		dc.setCapability("reportFormat", "xml");
+		dc.setCapability("stream", "Waseem-Ci-EclipsePlugin");
+		dc.setCapability("build.number", System.getenv("BUILD_NUMBER"));
+
 		String accessKey = getProperty("accessKey", cloudProperties);
 		if (accessKey != null && !accessKey.isEmpty()) {
 			dc.setCapability("accessKey", getProperty("accessKey", cloudProperties));
