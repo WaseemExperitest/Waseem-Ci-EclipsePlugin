@@ -15,7 +15,7 @@ public class BaseTest {
 
 	public void init(String deviceQuery) throws Exception {
 		initCloudProperties();
-		dc.setCapability("deviceQuery", adhocDevice(deviceQuery));
+		// dc.setCapability("deviceQuery", adhocDevice(deviceQuery));
 		dc.setCapability("reportDirectory", "reports");
 		dc.setCapability("reportFormat", "xml");
 		dc.setCapability("stream", "Waseem-Ci-EclipsePlugin");

@@ -10,9 +10,7 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
-import io.appium.java_client.remote.MobileCapabilityType;
-
+import io.appium.java_client.remote.MobileBrowserType;
 
 public class AndroidDemoTest extends BaseTest {
 	protected AndroidDriver<AndroidElement> driver = null;
@@ -20,21 +18,20 @@ public class AndroidDemoTest extends BaseTest {
 	@BeforeMethod
 	@Parameters("deviceQuery")
 	public void setUp(@Optional("@os='android'") String deviceQuery) throws Exception{
+
 		init(deviceQuery);
-		// Init application / device capabilities
-		//dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank/.LoginActivity");
-		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
-		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
+		
+		// Init application / device capabilities		
 		dc.setCapability("testName", "AndroidDemoTest");
+		dc.setBrowserName(MobileBrowserType.CHROMIUM);
+
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) + "/wd/hub"), dc);
 	}
 	
 	@Test
 	public void test(){
 		// Enter the test code
-
-		
-		
+		driver.get("googel.com");
 	}
 	
 	@AfterMethod
