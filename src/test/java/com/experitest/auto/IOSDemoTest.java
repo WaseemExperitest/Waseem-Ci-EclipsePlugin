@@ -30,7 +30,7 @@ public class IOSDemoTest extends BaseTest {
 	@Test
 	public void test() {
 		// Enter the test code
-		driver.get("google.com");
+		driver.get("ktm.com");
 	}
 
 	@AfterMethod

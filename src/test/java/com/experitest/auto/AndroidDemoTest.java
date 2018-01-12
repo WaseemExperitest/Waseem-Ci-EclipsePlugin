@@ -31,7 +31,7 @@ public class AndroidDemoTest extends BaseTest {
 	@Test
 	public void test(){
 		// Enter the test code
-		driver.get("googel.com");
+		driver.get("ktm.com");
 	}
 	
 	@AfterMethod
